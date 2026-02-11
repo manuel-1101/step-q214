@@ -14,15 +14,14 @@ STEP-Q214 is based on and aligned with existing STEP standards and organizations
 
 - ISO 10303-214 — Automotive Design (AP214)
 - ISO TC 184/SC 4 — Industrial data
-- STEPmod — STEP modular resources
 - PDES, Inc. — Product Data Exchange using STEP
 
 Official resources:
 
 - https://www.iso.org/standard/63141.html
-- https://www.steptools.com/stds/
-- https://committee.iso.org/home/tc184sc4
+- https://www.iso.org/committee/54158.html (https://committee.iso.org/home/tc184sc4)
 - https://www.pdesinc.org
+- https://www.steptools.com/stds/
 
 ---
 
@@ -45,24 +44,24 @@ Goal: enable a reliable, low-friction conversion of technical requests into bind
 ---
 
 ## Repository Structure
-
-/README.md Project overview (this file)
-/SPEC.md Normative core specification
-
-/spec/
-fields.md Field catalog and definitions
-enumerations.md Enumeration registry
-validation.md Validation and conformance rules
-
-/examples/
-minimal.step Minimal conformant example
-partial.step Partial metadata example (fallback case)
-full.step Fully populated metadata example
-
-/CONTRIBUTING.md Contribution guidelines
-/GOVERNANCE.md Maintainer and decision process
-/ROADMAP.md Planned versions and scope growth
-/LICENSE.md License
+    
+    /README.md Project overview (this file)
+    /SPEC.md Normative core specification
+    
+    /spec/
+    fields.md Field catalog and definitions
+    enumerations.md Enumeration registry
+    validation.md Validation and conformance rules
+    
+    /examples/
+    minimal.step Minimal conformant example
+    partial.step Partial metadata example (fallback case)
+    full.step Fully populated metadata example
+    
+    /CONTRIBUTING.md Contribution guidelines
+    /GOVERNANCE.md Maintainer and decision process
+    /ROADMAP.md Planned versions and scope growth
+    /LICENSE.md License
 
 ---
 
