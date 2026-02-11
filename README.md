@@ -1,13 +1,107 @@
-# step-q214
-Quote metadata layer for STEP AP214, enabling automated RFQ and quotation across multiple manufacturing processes.
+# STEP-Q214
 
-## Scope
-- Quote/requisition data only (not manufacturing planning data).
-- Designed to reduce manual form entry and increase quote-to-order conversion.
+STEP-Q214 defines a standardized metadata layer for STEP AP214 files, focused on quotation (RFQ) and pricing workflows for industrially manufacturable parts and assemblies.
 
-## Specification
-See: spec/STEP-Q214_v0.1.pdf
+It is designed to work across online platforms, internal ERP/CAM systems, manufacturer software, and hybrid (semi-manual) quotation processes.
 
-## Roadmap
-- STEP-Q214 (Quote)
-- STEP-Q242 (future: manufacturing-relevant extensions)
+Developed and maintained by **holydraft**.
+
+---
+
+## References
+
+STEP-Q214 is based on and aligned with existing STEP standards and organizations:
+
+- ISO 10303-214 — Automotive Design (AP214)
+- ISO TC 184/SC 4 — Industrial data
+- STEPmod — STEP modular resources
+- PDES, Inc. — Product Data Exchange using STEP
+
+Official resources:
+
+- https://www.iso.org/standard/63141.html
+- https://www.steptools.com/stds/
+- https://committee.iso.org/home/tc184sc4
+- https://www.pdesinc.org
+
+---
+
+## Purpose
+
+Manufacturing buyers and quotation teams repeatedly enter the same information into forms and pricing systems (material, quantity, tolerances, surface, certificates, delivery targets, etc.). STEP-Q214 embeds these RFQ-relevant parameters directly into the STEP file in a structured, machine-readable way.
+
+Goal: enable a reliable, low-friction conversion of technical requests into binding quotations by allowing quotation engines to automatically discover and interpret metadata from STEP-Q214 files.
+
+---
+
+## Key Principles
+
+- Based on **ISO 10303-214 (STEP AP214)** geometry and topology
+- **Backward compatible** with standard AP214 parsers
+- **No modification** of core geometry entities
+- Metadata stored only via standard AP214 entities (no proprietary entity types)
+- Strong **fallback**: all fields are optional; missing data must not cause parse errors
+
+---
+
+## Repository Structure
+
+/README.md Project overview (this file)
+/SPEC.md Normative core specification
+
+/spec/
+fields.md Field catalog and definitions
+enumerations.md Enumeration registry
+validation.md Validation and conformance rules
+
+/examples/
+minimal.step Minimal conformant example
+partial.step Partial metadata example (fallback case)
+full.step Fully populated metadata example
+
+/CONTRIBUTING.md Contribution guidelines
+/GOVERNANCE.md Maintainer and decision process
+/ROADMAP.md Planned versions and scope growth
+/LICENSE.md License
+
+---
+
+## Documents
+
+### Core Specification
+- SPEC.md: Normative core rules (what is required for STEP-Q214 conformance)
+- spec/fields.md: Detailed field definitions (types, semantics, examples)
+- spec/enumerations.md: Controlled vocabulary (enums) and change process
+- spec/validation.md: Technical validation + parser resilience requirements
+
+### Examples
+- examples/: Reference STEP files for implementers
+
+### Project Governance
+- CONTRIBUTING.md — Contribution process
+- GOVERNANCE.md — Maintainer structure
+- ROADMAP.md — Planned evolution
+- LICENSE.md — Usage and redistribution
+
+---
+
+## Status
+
+- Current version: **v0.1 (Draft)**
+- This is not an ISO standard; it is an open specification under active development.
+
+---
+
+## Contributing
+
+Contributions are welcome via pull requests.
+
+See **CONTRIBUTING.md**.
+
+---
+
+## Contact
+
+holydraft (manupa GbR)  
+https://www.holydraft.de  
+manuel@holydraft.com
